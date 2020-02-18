@@ -1,7 +1,9 @@
 ---
 title: New Blog
-date: "2015-05-28T22:40:32.169Z"
+dob: "June 1868"
 description: This is a custom description for SEO and Open Graph purposes for new blog,  rather than the default generated excerpt. Simply add a description field to the frontmatter.
+priority: 4
+date: "June 1868"
 ---
 
 New blog stuff

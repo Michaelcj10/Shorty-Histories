@@ -8,7 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import styled from "styled-components"
+import Link from "./atoms/link"
 
 import { rhythm } from "../utils/typography"
 
@@ -33,7 +33,7 @@ const Bio = () => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   return (
     <div
       style={{
@@ -55,18 +55,12 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
-        <LinkStyle href="blah"> test </LinkStyle>
+        Written by <strong>{author}</strong> who works a front end developer in
+        Dublin
+        <Link href="blah" text="LinkedIn profile" />
       </p>
     </div>
   )
 }
 
-const LinkStyle = styled.a`
-  color: #5c8c5c;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: none;
-`
 export default Bio
