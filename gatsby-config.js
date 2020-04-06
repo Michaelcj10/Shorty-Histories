@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `1916 signatories`,
+    title: `1916 Leaders`,
     author: `Michael James`,
     description: `An introduction to the 1916 risings famous charachters`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,

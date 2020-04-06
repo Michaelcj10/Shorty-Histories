@@ -19,7 +19,7 @@ He was a founder of the [ Irish Citizens' Army.](https://en.wikipedia.org/wiki/I
 ## Irish citizen army
 
 Came to Dublin in 1896. Finding it hard to find work and becoming disilluioned, left to go to America in 1903.
-Seven years later he returned to Ireland to head up the Irish Transport and General Workers Union in Belfast. After the disastrous general strike of 1913 and [Jim Larkin's](https://en.wikipedia.org/wiki/James_Larkin) departure for America Connolly came to Dublin to head up the local ITGWU—and its [Citizen Army](https://en.wikipedia.org/wiki/Irish_Citizen_Army)
+Seven years later he returned to Ireland to head up the Irish Transport and General Workers Union in Belfast. After the disastrous general strike of 1913 and [Jim Larkin's](https://en.wikipedia.org/wiki/James_Larkin) departure for America Connolly came to Dublin to head up the local ITGWU—and its [Irish Citizen Army](https://en.wikipedia.org/wiki/Irish_Citizen_Army)
 
 The Citizen Army became his obsession. Although only 220 in strength, he drilled them until they became, in his words, “a real revolutionary army.”
 
