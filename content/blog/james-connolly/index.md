@@ -1,6 +1,7 @@
 ---
 title: James Connolly
-description: "Connolly would link the fight for Irish freedom to the need to uproot capitalism, and he was the first person to conceive of an Irish Labour Party without living to see it come to fruition."
+description: "A short history of James Connolly, Commandant-General in the Army of the Irish Republic."
+metaDescription: "Short history of the life of James Connolly one of the signatories of the promlamation"
 dob: "Commandant-General in the Army of the Irish Republic"
 priority: 1
 date: "June 1868"

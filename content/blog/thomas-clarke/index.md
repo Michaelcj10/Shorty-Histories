@@ -1,6 +1,6 @@
 ---
 title: Thomas Clarke
-description: "During the Rising itself, Clarke would be stationed at the G.P.O. Although he had no formal military rank he was recognised by the garrison as one of the commanders."
+description: "A short history of the life of Thomas Clarke and how his influence affected the 1916 rising."
 dob: "Treasurer of the Irish Republican Brotherhood"
 priority: 2
 date: "March 1858"
