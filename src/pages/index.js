@@ -11,8 +11,11 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Simple History" />
+      <SEO title="Irish Shorts" />
+      <div style={{minHeight: '200px'}}>
       <img style={{width: '100%'}} src={`1916_banner-min.png`} />
+
+      </div>
       {posts.map(({ node }, index) => {
         const title = node.frontmatter.title || node.fields.slug;
         const imgUrl = title.replace(/\s+/g, '_').toLowerCase();
@@ -27,7 +30,8 @@ const BlogIndex = ({ data, location }) => {
                 }}
               >
                 <img style={{width: '75px', marginBottom: '0px', borderRadius: '50%', marginRight: '10px',
-    boxShadow: '0 5px 15px 0px rgba(0, 0, 0, 0.6)'}} src={`${imgUrl}.jpg`} />
+    boxShadow: '0 5px 15px 0px rgba(0, 0, 0, 0.6)'}} src={`${imgUrl}.jpg`} />                  
+
                 <Link
                   style={{ boxShadow: `none`, color: "rgb(25, 25, 25)" }}
                   to={node.fields.slug}

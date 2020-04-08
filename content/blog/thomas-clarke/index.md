@@ -8,7 +8,7 @@ date: "March 1858"
 
 He was born in 1857 in Tipperary to an Irish protestant father, the British Army bombardier James Clarke.
 
-He spent the first 7 years of his life in [ South Africa.](https://en.wikipedia.org/wiki/South_Africa)
+He spent the first 7 years of his life in **South Africa.**
 
 ####Clarke said this on his participation in the Easter Rising
 
@@ -50,7 +50,7 @@ Clarke was the first signatory of the [Proclamation of the Irish Republic](https
  After a week of heavy fighting the leaders
 gathered at a house in Moore Street and the order to surrender was given.
 
-Clarke wrote on the wall of the house
+### Clarke wrote on the wall of the house
 
 > We had to evacuate the GPO. The boys put up a grand fight, and that fight will save the soul of Ireland.
 
@@ -69,6 +69,10 @@ Before his execution, he asked his wife Kathleen to give this message to the Iri
 Thomas Clarke Tower in Ballymun was named after him, with the top floor used a short-stay hotel before its demolition in 2008. [Clarke Train Station](https://en.wikipedia.org/wiki/Dundalk_railway_station) in [Dundalk](https://en.wikipedia.org/wiki/Dundalk) was also named for him. There's a commemorative plaque for Clarke on the corner of [Parnell Street](https://en.wikipedia.org/wiki/Parnell_Street) - where he had his shop - and [O'Connell Street](https://en.wikipedia.org/wiki/O%27Connell_Street), home of the [GPO](https://en.wikipedia.org/wiki/General_Post_Office,_Dublin).
 
 ![Thomas Clarke](./thomas_clarke_4.jpg)
+
+## Gravesite
+
+Thomas is buried in [Arbour Hill Cemetary](https://en.wikipedia.org/wiki/Arbour_Hill_Prison) information on his grave can be found [here](https://www.findagrave.com/memorial/4267/thomas-clarke)
 
 ## Learn more
 

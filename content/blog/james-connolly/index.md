@@ -67,6 +67,10 @@ It is at this time that Connolly went from martyr to legend. Because his wounds 
 
 A memorial exists across from Bus Aras to **James Connolly**, hero of Ireland.
 
+## Gravesite
+
+James is buried in [Arbour Hill Cemetary](https://en.wikipedia.org/wiki/Arbour_Hill_Prison) information on his grave can be found [here](https://www.findagrave.com/memorial/4276/james-connolly)
+
 ## Learn more
 
 Take the [Kilmainham Gaol tour ](http://kilmainhamgaolmuseum.ie/)
