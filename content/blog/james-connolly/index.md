@@ -2,7 +2,7 @@
 title: James Connolly
 description: "A short history of James Connolly, Commandant-General in the Army of the Irish Republic."
 metaDescription: "Short history of the life of James Connolly one of the signatories of the promlamation"
-dob: "Commandant-General in the Army of the Irish Republic"
+dob: "Commandant-General in the Army of the Irish Republic."
 priority: 1
 date: "June 1868"
 ---
