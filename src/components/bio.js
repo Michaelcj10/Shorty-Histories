@@ -57,7 +57,7 @@ const Bio = () => {
       <p>
         Written by <strong>{author}</strong> who works a front end developer in
         Dublin
-        <Link href="blah" text="LinkedIn profile" />
+        <Link href="https://www.linkedin.com/in/michael-james-12b49968/" text="LinkedIn profile" />
       </p>
     </div>
   )
