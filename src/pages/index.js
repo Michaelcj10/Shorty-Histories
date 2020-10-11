@@ -11,6 +11,8 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+
+
       <SEO title="Irish Shorts" />
       <div style={{minHeight: '200px'}}>
       <img style={{width: '100%'}} src={`1916_banner-min.png`} />
