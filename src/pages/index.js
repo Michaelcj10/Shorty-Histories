@@ -11,8 +11,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-
-
       <SEO title="Irish Shorts" />
       <div style={{minHeight: '200px'}}>
       <img style={{width: '100%'}} src={`1916_banner-min.png`} />
@@ -30,6 +28,7 @@ const BlogIndex = ({ data, location }) => {
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
+                
               >
                 <img style={{width: '75px', marginBottom: '0px', borderRadius: '50%', marginRight: '10px',
     boxShadow: '0 5px 15px 0px rgba(0, 0, 0, 0.6)'}} src={`${imgUrl}.jpg`} />                  
