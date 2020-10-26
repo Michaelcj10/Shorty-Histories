@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { Fragment, useState } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Break from "../components/atoms/break"
+import Label from "../components/atoms/label"
 import ImageLoader from "../components/atoms/imageAsync"
 import Input from "../components/atoms/input"
 import styled from "styled-components"
@@ -12,11 +13,6 @@ import { motion } from "framer-motion"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const [searchVal, setVal] = useState("")
-
-  const variants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0.5 },
-  }
 
   const getPosts = () => {
     // nothing searched, return full list
@@ -43,19 +39,35 @@ const BlogIndex = ({ data, location }) => {
     }
   }
 
+  const getCategories = () => {
+    const allCat = []
+
+    data.allMarkdownRemark.edges.forEach(element => {
+      const curr = element.node.frontmatter.category
+
+      if (!allCat.includes(curr)) {
+        allCat.push(curr)
+      }
+    })
+
+    return allCat
+  }
+
   const postsShowing = getPosts()
+  const categories = getCategories()
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Short Historys" />
       {
-        <div style={{ minHeight: "200px" }}>
+        <Fragment>
           <ImageLoader
             imgAlt="Banner"
             width="100%"
             height="300px"
             imgSrc="1916_banner-min.png"
           />
+          <CustomH1>About us</CustomH1>
           <p>
             Let's expore some of the <strong>famous and infamous </strong>
             characters in Irish history. From James Connolly to Brian Boru
@@ -63,39 +75,36 @@ const BlogIndex = ({ data, location }) => {
             We aim to explore that <strong>10,000 year history</strong> and all
             those characters in as simple and concise terms as we can.
           </p>
-          <motion.div
-            animate={{ x: 5 }}
-            transition={{ ease: "easeOut", duration: 1 }}
-          >
-            <AllPeopleTitle>
-              All people
-              <span>{`(${postsShowing.length} showing)`}</span>
-            </AllPeopleTitle>
-          </motion.div>
+          <CustomH1>Search for someone</CustomH1>
+          <Label text="Select categories" focused={false} />
+          <Categories>
+            {categories.map((category, i) => {
+              return <div key={i}>{category}</div>
+            })}
+          </Categories>
 
           <Input
-            label="Search for someone"
+            label="Search by value"
             placeholder="Enter a name or tag"
             onChange={val => {
               setVal(val)
             }}
             value={searchVal}
           />
-        </div>
+        </Fragment>
       }
-      {postsShowing.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        const imgUrl = title.replace(/\s+/g, "_").toLowerCase()
-        return (
-          <motion.div
-            key={node.fields.slug}
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-          >
-            <Article>
+      <AllPeopleTitle>
+        All people
+        <span>{`(${postsShowing.length} showing)`}</span>
+      </AllPeopleTitle>
+      <div>
+        {postsShowing.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          const imgUrl = title.replace(/\s+/g, "_").toLowerCase()
+          return (
+            <Article key={node.fields.slug}>
               <header>
-                <h3
+                <EntryItem
                   style={{
                     marginBottom: rhythm(1 / 4),
                   }}
@@ -107,13 +116,15 @@ const BlogIndex = ({ data, location }) => {
                     imgSrc={`${imgUrl}.jpg`}
                     isCircle={true}
                   />
-                  <Link
-                    style={{ boxShadow: `none`, color: "rgb(25, 25, 25)" }}
-                    to={node.fields.slug}
-                  >
-                    {title}
-                  </Link>
-                </h3>
+                  <h3>
+                    <Link
+                      style={{ boxShadow: `none`, color: "rgb(25, 25, 25)" }}
+                      to={node.fields.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h3>
+                </EntryItem>
                 <small>{node.frontmatter.dob}</small>
                 <Break />
               </header>
@@ -126,9 +137,9 @@ const BlogIndex = ({ data, location }) => {
               </section>
               <Tags>{node.frontmatter.tags}</Tags>
             </Article>
-          </motion.div>
-        )
-      })}
+          )
+        })}
+      </div>
     </Layout>
   )
 }
@@ -140,17 +151,60 @@ const PersonImage = styled(ImageLoader)`
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 `
 
-const AllPeopleTitle = styled.h1`
-  span {
-    font-size: 14px;
-    margin-left: 8px;
+const Card = styled.div`
+  background: #f7f7f7;
+  padding: 10px 20px 35px 20px;
+  margin-top: 50px;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+`
+
+const Categories = styled.div`
+  margin: 5px auto 25px;
+  display: flex;
+
+  div {
+    width: fit-content;
+    background: #169b62;
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 8px;
   }
 `
-const Tags = styled.h5`
-  font-size: 14px;
-  margin-top: 0px;
+
+const EntryItem = styled.div`
+  display: flex;
+  align-items: center;
+
+  img {
+    margin: 0px 20px 0px 0px;
+  }
 `
-const Article = styled.article`
+
+const CustomH1 = styled.h1`
+  font-size: 2em;
+`
+
+const AllPeopleTitle = styled(CustomH1)`
+  span {
+    font-size: 16px;
+    margin-left: 8px;
+    font-weight: normal;
+  }
+`
+
+const Tags = styled.h5`
+  font-size: 16px;
+  margin-top: 0px;
+  line-height: 20px;
+`
+const Article = styled(Card)`
+  small {
+    font-weight: 900;
+  }
   img {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     border: 1px solid #fff;

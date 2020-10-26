@@ -4,7 +4,7 @@ description: "A short history of the life of Thomas Clarke and how his influence
 dob: "Treasurer of the Irish Republican Brotherhood"
 date: "March 1858"
 tags: "#tipperary #treasurer #irb #gpo #proclamation"
-category: "1916 rising"
+category: "1916 rising 2"
 ---
 
 He was born in 1857 in Tipperary to an Irish protestant father, the British Army bombardier James Clarke.

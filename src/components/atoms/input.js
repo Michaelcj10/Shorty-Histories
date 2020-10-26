@@ -1,18 +1,13 @@
 import React, { Fragment, useState } from "react"
 import styled from "styled-components"
+import Label from "./label"
+
 const Input = props => {
   const [inputFocused, setFocused] = useState(false)
 
   return (
     <Fragment>
-      <Label
-        style={{
-          fontSize: inputFocused ? "15px" : "14px",
-          color: inputFocused ? "rgb(70, 194, 147)" : "#191919",
-        }}
-      >
-        {props.label}
-      </Label>
+      <Label text={props.label} focused={inputFocused} />
       <InputStyle
         style={{
           borderBottom: inputFocused
@@ -40,14 +35,7 @@ const InputStyle = styled.input`
   border: none;
   transition: all 0.4s;
   outline: none;
+  background: transparent;
 `
-const Label = styled.label`
-  color: #191919;
-  font-family: "Merriweather", "Georgia", serif;
-  font-weight: 900;
-  text-rendering: optimizeLegibility;
-  font-size: 1.4427rem;
-  line-height: 1.1;
-  transition: all 0.2s;
-`
+
 export default Input
