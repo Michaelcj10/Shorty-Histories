@@ -75,29 +75,34 @@ const BlogIndex = ({ data, location }) => {
             We aim to explore that <strong>10,000 year history</strong> and all
             those characters in as simple and concise terms as we can.
           </p>
-          <CustomH1>Search for someone</CustomH1>
-          <Label text="Select categories" focused={false} />
-          <Categories>
-            {categories.map((category, i) => {
-              return <div key={i}>{category}</div>
-            })}
-          </Categories>
 
-          <Input
-            label="Search by value"
-            placeholder="Enter a name or tag"
-            onChange={val => {
-              setVal(val)
-            }}
-            value={searchVal}
-          />
+          <div>
+            <h1 style={{ fontSize: "1.5em" }}>Search for someone</h1>
+            <Label text="Select categories" focused={false} />
+            <Categories>
+              {categories.map((category, i) => {
+                return <Badge key={i}>{category}</Badge>
+              })}
+            </Categories>
+
+            <Input
+              label="Search by value"
+              placeholder="Enter a name or tag"
+              onChange={val => {
+                setVal(val)
+              }}
+              value={searchVal}
+            />
+          </div>
         </Fragment>
       }
-      <AllPeopleTitle>
+      <h1 style={{ fontSize: "1.5em" }}>
         All people
-        <span>{`(${postsShowing.length} showing)`}</span>
-      </AllPeopleTitle>
-      <div>
+        <span
+          style={{ fontWeight: "normal", fontSize: "14px", marginLeft: "8px" }}
+        >{`(${postsShowing.length} showing)`}</span>
+      </h1>
+      <Fragment>
         {postsShowing.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const imgUrl = title.replace(/\s+/g, "_").toLowerCase()
@@ -128,18 +133,12 @@ const BlogIndex = ({ data, location }) => {
                 <small>{node.frontmatter.dob}</small>
                 <Break />
               </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
               <Tags>{node.frontmatter.tags}</Tags>
+              <Badge>{node.frontmatter.category}</Badge>
             </Article>
           )
         })}
-      </div>
+      </Fragment>
     </Layout>
   )
 }
@@ -150,29 +149,19 @@ const PersonImage = styled(ImageLoader)`
   margin-right: 10px;
   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
 `
-
-const Card = styled.div`
-  background: #f7f7f7;
-  padding: 10px 20px 35px 20px;
-  margin-top: 50px;
-  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
-    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
-`
-
 const Categories = styled.div`
   margin: 5px auto 25px;
   display: flex;
+`
 
-  div {
-    width: fit-content;
-    background: #169b62;
-    padding: 2px 5px;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-right: 8px;
-  }
+const Badge = styled.div`
+  width: fit-content;
+  background: #169b62;
+  padding: 2px 5px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 8px;
 `
 
 const EntryItem = styled.div`
@@ -188,20 +177,14 @@ const CustomH1 = styled.h1`
   font-size: 2em;
 `
 
-const AllPeopleTitle = styled(CustomH1)`
-  span {
-    font-size: 16px;
-    margin-left: 8px;
-    font-weight: normal;
-  }
-`
-
 const Tags = styled.h5`
   font-size: 16px;
   margin-top: 0px;
+  font-weight: 500;
   line-height: 20px;
 `
-const Article = styled(Card)`
+const Article = styled.div`
+  margin-top: 50px;
   small {
     font-weight: 900;
   }
