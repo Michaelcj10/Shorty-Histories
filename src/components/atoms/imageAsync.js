@@ -74,13 +74,6 @@ const ImageLoader = props => {
           )}
         </div>
       )}
-      <h1
-        onClick={() => {
-          setLoaded(true)
-        }}
-      >
-        {loaded ? "LOADED" : "NOPE"}
-      </h1>
       <img
         ref={imgRef}
         style={{
