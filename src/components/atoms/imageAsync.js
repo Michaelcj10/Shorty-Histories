@@ -74,6 +74,7 @@ const ImageLoader = props => {
           borderRadius: props.isCircle ? "50%" : "0px",
         }}
         onLoad={() => {
+          console.log(loaded, props.imgSrc)
           setLoaded(true)
         }}
         src={props.imgSrc}
