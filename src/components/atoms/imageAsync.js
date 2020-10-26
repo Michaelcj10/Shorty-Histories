@@ -53,7 +53,6 @@ const ImageLoader = props => {
     <div>
       {!loaded && (
         <div
-          ref={imgRef}
           style={{
             height: props.height,
             width: props.width,
@@ -83,6 +82,7 @@ const ImageLoader = props => {
         {loaded ? "LOADED" : "NOPE"}
       </h1>
       <img
+        ref={imgRef}
         style={{
           display: loaded ? "block" : "none",
           height: props.height,
