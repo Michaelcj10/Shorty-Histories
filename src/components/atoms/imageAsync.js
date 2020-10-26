@@ -66,7 +66,13 @@ const ImageLoader = props => {
           )}
         </div>
       )}
-      <h1>{loaded ? "LOADED" : "NOPE"}</h1>
+      <h1
+        onClick={() => {
+          setLoaded(true)
+        }}
+      >
+        {loaded ? "LOADED" : "NOPE"}
+      </h1>
       <img
         style={{
           display: loaded ? "block" : "none",
