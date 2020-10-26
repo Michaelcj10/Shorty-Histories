@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, Fragment } from "react"
+import { useState, Fragment, useRef, useEffect } from "react"
 import styled from "styled-components"
 
 const First = styled.div`
@@ -41,10 +41,19 @@ const Forth = styled.div`
 
 const ImageLoader = props => {
   const [loaded, setLoaded] = useState(false)
+  const imgRef = useRef(null)
+
+  useEffect(() => {
+    if (imgRef.current?.complete) {
+      setLoaded(true)
+    }
+  }, [])
+
   return (
     <div>
       {!loaded && (
         <div
+          ref={imgRef}
           style={{
             height: props.height,
             width: props.width,
