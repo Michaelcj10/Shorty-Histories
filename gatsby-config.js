@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `1916 Leaders`,
+    title: `Short Historys`,
     author: `Michael James`,
-    description: `An introduction to the 1916 risings famous charachters`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `An introduction to Irelands most famous charachters`,
+    siteUrl: `http://shorthistorys.com/`,
     social: {
       twitter: `m.james`,
     },
@@ -63,7 +63,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `1916 proclamation signatories`,
+        name: `Short historys`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,

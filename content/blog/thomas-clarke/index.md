@@ -2,8 +2,9 @@
 title: Thomas Clarke
 description: "A short history of the life of Thomas Clarke and how his influence affected the 1916 rising."
 dob: "Treasurer of the Irish Republican Brotherhood"
-priority: 2
 date: "March 1858"
+tags: "#tipperary #treasurer #irb #gpo #proclamation"
+category: "1916 rising"
 ---
 
 He was born in 1857 in Tipperary to an Irish protestant father, the British Army bombardier James Clarke.
@@ -18,9 +19,9 @@ He spent the first 7 years of his life in **South Africa.**
 
 ## Irish Republican Brotherhood
 
-In 1878, at the age of 20, he joined the [Irish Republican Brotherhood (IRB)](https://en.wikipedia.org/wiki/Irish_Republican_Brotherhood) following the visit to Dungannon by John Daly, and by 1880 he was centre (head) of the local IRB circle. In August that year, after a member of the 
+In 1878, at the age of 20, he joined the [Irish Republican Brotherhood (IRB)](https://en.wikipedia.org/wiki/Irish_Republican_Brotherhood) following the visit to Dungannon by John Daly, and by 1880 he was centre (head) of the local IRB circle. In August that year, after a member of the
 [Royal Irish Constabulary (RIC)](https://en.wikipedia.org/wiki/Royal_Irish_Constabulary)
- had shot and killed a man during riots between the [Orange Order](https://en.wikipedia.org/wiki/Orange_Order) and the  [Ancient Order of Hibernians (AOH)](https://en.wikipedia.org/wiki/Ancient_Order_of_Hibernians) in Dungannon, Clarke and other IRB members attacked some RIC men in Irish Street. 
+had shot and killed a man during riots between the [Orange Order](https://en.wikipedia.org/wiki/Orange_Order) and the [Ancient Order of Hibernians (AOH)](https://en.wikipedia.org/wiki/Ancient_Order_of_Hibernians) in Dungannon, Clarke and other IRB members attacked some RIC men in Irish Street.
 
 ## Hard jail time
 
@@ -30,7 +31,7 @@ After a bombing campaign in the UK in 1883, Clarke was captured and would spend 
 
 ## America
 
-When Clarke was finally released in 1898, he moved back to the [United States](https://en.wikipedia.org/wiki/United_States), to Brooklyn, where he married [Kathleen Daly](https://en.wikipedia.org/wiki/Kathleen_Clarke). Kathleen was the niece of [John Daly](https://en.wikipedia.org/wiki/John_Daly_(Fenian)), who had persuaded Clarke to join the IRB twenty years earlier, and she was 21 years his junior. They would remain in New York until 1907.
+When Clarke was finally released in 1898, he moved back to the [United States](https://en.wikipedia.org/wiki/United_States), to Brooklyn, where he married [Kathleen Daly](https://en.wikipedia.org/wiki/Kathleen_Clarke). Kathleen was the niece of [John Daly](<https://en.wikipedia.org/wiki/John_Daly_(Fenian)>), who had persuaded Clarke to join the IRB twenty years earlier, and she was 21 years his junior. They would remain in New York until 1907.
 
 ## The spark to set off the rising
 
@@ -47,7 +48,7 @@ They began to plan the rising. The brought in [James Connolly](https://en.wikipe
 Clarke was stationed at the [GPO](https://en.wikipedia.org/wiki/General_Post_Office,_Dublin) during the rising.
 Although he had no formal military rank he was recognised by the garrison as one of the commanders.
 Clarke was the first signatory of the [Proclamation of the Irish Republic](https://en.wikipedia.org/wiki/Proclamation_of_the_Irish_Republic). It has been said that Clarke indeed would have been the declared President and Commander-in-chief, but he refused any military rank and such honours; these were given to [Pearse](https://en.wikipedia.org/wiki/Patrick_Pearse), who was more well-known and respected on a national level. Kathleen Clarke later claimed that her husband, and not Pearse, was first president of the Irish Republic
- After a week of heavy fighting the leaders
+After a week of heavy fighting the leaders
 gathered at a house in Moore Street and the order to surrender was given.
 
 ### Clarke wrote on the wall of the house

@@ -2,8 +2,9 @@
 title: Padraig Pearse
 description: "A short history of the life of Padraig Pearse and how his influence affected the 1916 rising."
 dob: "Commander-in-chief"
-priority: 4
 date: "November 1879"
+tags: "#commander #brunswickstreet #irb #stendas #asgaeilge #proclamation"
+category: "1916 rising"
 ---
 
 He was born in 1879 in Dublin. Following his execution along with fifteen others, Pearse came to be seen by many as the embodiment of the rebellion.

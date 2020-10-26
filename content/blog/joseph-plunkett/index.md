@@ -2,13 +2,13 @@
 title: Joseph Plunkett
 description: "A short history of the life of Joseph Mary Plunkett, his influence in the rising and his eventual execution."
 dob: "Commandant General"
-priority: 23
 date: "November 1887"
+tags: "#grace #fitzwilliamstreet #irb #commandantgeneral #proclamation"
+category: "1916 rising"
 ---
 
-Joseph Mary Plunkett was the son of [Horace Plunkett](https://en.wikipedia.org/wiki/Horace_Plunkett), a Papal Count. He was born in **Dublin** in 1887. If there was one renaissance man involved in the Easter Rising it was Joe Plunkett. 
+Joseph Mary Plunkett was the son of [Horace Plunkett](https://en.wikipedia.org/wiki/Horace_Plunkett), a Papal Count. He was born in **Dublin** in 1887. If there was one renaissance man involved in the Easter Rising it was Joe Plunkett.
 He was also the youngest signatory of the Proclamation.
-
 
 ## His beginnings
 

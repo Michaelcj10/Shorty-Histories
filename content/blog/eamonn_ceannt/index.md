@@ -2,8 +2,9 @@
 title: Eamonn Ceannt
 description: "A short history of the life of Éamonn Ceannt and how his influence affected the 1916 rising."
 dob: "Director of Communications"
-priority: 5
 date: "September 1881"
+tags: "#ballymoe #communications #gaelicleague #commandant #proclamation"
+category: "1916 rising"
 ---
 
 Arguably the least well known of the seven signatories
