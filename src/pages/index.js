@@ -6,9 +6,9 @@ import { rhythm } from "../utils/typography"
 import Break from "../components/atoms/break"
 import Label from "../components/atoms/label"
 import ImageLoader from "../components/atoms/imageAsync"
+import Button from "../components/atoms/button"
 import Input from "../components/atoms/input"
 import styled from "styled-components"
-import { motion } from "framer-motion"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -58,7 +58,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Short Historys" />
+      <SEO title="Home" />
       {
         <Fragment>
           <ImageLoader
@@ -68,13 +68,16 @@ const BlogIndex = ({ data, location }) => {
             imgSrc="1916_banner-min.png"
           />
           <CustomH1>About us</CustomH1>
-          <p>
-            Let's expore some of the <strong>famous and infamous </strong>
-            characters in Irish history. From James Connolly to Brian Boru
-            Ireland has one of the richest cultures and historys in the worlds.
-            We aim to explore that <strong>10,000 year history</strong> and all
-            those characters in as simple and concise terms as we can.
-          </p>
+          <blockquote>
+            <p>
+              Let's expore some of the <strong>famous and infamous </strong>
+              characters in Irish history. From James Connolly to Brian Boru
+              Ireland has one of the richest cultures and historys in the world.
+              We aim to explore that
+              <strong>10,000 year history</strong> and all those characters in
+              as simple and concise terms as we can.
+            </p>
+          </blockquote>
 
           <div>
             <h1 style={{ fontSize: "1.5em" }}>Search for someone</h1>
@@ -108,7 +111,7 @@ const BlogIndex = ({ data, location }) => {
           const imgUrl = title.replace(/\s+/g, "_").toLowerCase()
           return (
             <Article key={node.fields.slug}>
-              <header>
+              <header style={{ marginBottom: "20px" }}>
                 <EntryItem
                   style={{
                     marginBottom: rhythm(1 / 4),
@@ -121,6 +124,7 @@ const BlogIndex = ({ data, location }) => {
                     imgSrc={`${imgUrl}.jpg`}
                     isCircle={true}
                   />
+
                   <h3>
                     <Link
                       style={{ boxShadow: `none`, color: "rgb(25, 25, 25)" }}
@@ -134,7 +138,12 @@ const BlogIndex = ({ data, location }) => {
                 <Break />
               </header>
               <Tags>{node.frontmatter.tags}</Tags>
-              <Badge>{node.frontmatter.category}</Badge>
+              <div style={{ fontWeight: "bold" }}>
+                {node.frontmatter.category}
+              </div>
+              <Link to={node.fields.slug}>
+                <Button text="Read more" />
+              </Link>
             </Article>
           )
         })}
@@ -156,7 +165,7 @@ const Categories = styled.div`
 
 const Badge = styled.div`
   width: fit-content;
-  background: #169b62;
+  background: #1f1f1f;
   padding: 2px 5px;
   color: #fff;
   border-radius: 8px;
@@ -184,7 +193,7 @@ const Tags = styled.h5`
   line-height: 20px;
 `
 const Article = styled.div`
-  margin-top: 50px;
+  margin-top: 25px;
   small {
     font-weight: 900;
   }
