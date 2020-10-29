@@ -7,21 +7,28 @@ import Break from "../components/atoms/break"
 import Label from "../components/atoms/label"
 import ImageLoader from "../components/atoms/imageAsync"
 import Button from "../components/atoms/button"
+import SecondaryButton from "../components/atoms/secondaryButton"
 import Input from "../components/atoms/input"
 import styled from "styled-components"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const [searchVal, setVal] = useState("")
+  const [filteredCategories, setFiltered] = useState([])
 
   const getPosts = () => {
+    // filter all catergories user has unselected first
+    var filtered = data.allMarkdownRemark.edges.filter(function(e) {
+      return !this.includes(e.node.frontmatter.category)
+    }, filteredCategories)
+
     // nothing searched, return full list
     if (searchVal.length < 1) {
-      return data.allMarkdownRemark.edges
+      return filtered
     }
 
     // filter after search applied
-    const f = data.allMarkdownRemark.edges.filter(
+    const f = filtered.filter(
       x =>
         x.node.frontmatter.title
           .toLowerCase()
@@ -34,8 +41,8 @@ const BlogIndex = ({ data, location }) => {
     if (f && f.length > 0) {
       return f
     } else {
-      // just return the full list
-      return data.allMarkdownRemark.edges
+      // just return an empty list
+      return []
     }
   }
 
@@ -53,6 +60,11 @@ const BlogIndex = ({ data, location }) => {
     return allCat
   }
 
+  const clearFilters = () => {
+    setVal("")
+    setFiltered([])
+  }
+
   const postsShowing = getPosts()
   const categories = getCategories()
 
@@ -65,7 +77,7 @@ const BlogIndex = ({ data, location }) => {
             imgAlt="Banner"
             width="100%"
             height="300px"
-            imgSrc="1916_banner-min.png"
+            imgSrc="man.svg"
           />
           <CustomH1>About us</CustomH1>
           <blockquote>
@@ -84,7 +96,30 @@ const BlogIndex = ({ data, location }) => {
             <Label text="Select categories" focused={false} />
             <Categories>
               {categories.map((category, i) => {
-                return <Badge key={i}>{category}</Badge>
+                return (
+                  <Badge
+                    style={{
+                      opacity: filteredCategories.includes(category)
+                        ? "0.2"
+                        : "1",
+                    }}
+                    onClick={() => {
+                      const newArr = filteredCategories
+                      if (filteredCategories.includes(category)) {
+                        console.log("here")
+                        const index = newArr.indexOf(category)
+                        newArr.splice(index, 1)
+
+                        setFiltered([...newArr])
+                      } else {
+                        setFiltered([...newArr, category])
+                      }
+                    }}
+                    key={i}
+                  >
+                    {category}
+                  </Badge>
+                )
               })}
             </Categories>
 
@@ -95,6 +130,12 @@ const BlogIndex = ({ data, location }) => {
                 setVal(val)
               }}
               value={searchVal}
+            />
+            <SecondaryButton
+              text="Clear filters"
+              onClick={() => {
+                clearFilters()
+              }}
             />
           </div>
         </Fragment>
@@ -126,31 +167,48 @@ const BlogIndex = ({ data, location }) => {
                   />
 
                   <h3>
-                    <Link
-                      style={{ boxShadow: `none`, color: "rgb(25, 25, 25)" }}
-                      to={node.fields.slug}
-                    >
-                      {title}
-                    </Link>
+                    <PageLink to={node.fields.slug}>{title}</PageLink>
                   </h3>
                 </EntryItem>
                 <small>{node.frontmatter.dob}</small>
                 <Break />
               </header>
-              <Tags>{node.frontmatter.tags}</Tags>
-              <div style={{ fontWeight: "bold" }}>
-                {node.frontmatter.category}
-              </div>
+              <blockquote>
+                <Tags>{node.frontmatter.tags}</Tags>
+                <div style={{ fontWeight: "bold" }}>
+                  {node.frontmatter.category}
+                </div>
+              </blockquote>
+
               <Link to={node.fields.slug}>
                 <Button text="Read more" />
               </Link>
             </Article>
           )
         })}
+        {postsShowing.length === 0 && (
+          <Fragment>
+            <p>
+              You're filtering out everything, are you sure you're on the right
+              site?!
+            </p>
+            <Button
+              text="Clear filters"
+              onClick={() => {
+                clearFilters()
+              }}
+            />
+          </Fragment>
+        )}
       </Fragment>
     </Layout>
   )
 }
+
+const PageLink = styled(Link)`
+  color: rgb(25, 25, 25);
+  box-shadow: none;
+`
 
 const PersonImage = styled(ImageLoader)`
   margin-bottom: 0px;
@@ -165,10 +223,9 @@ const Categories = styled.div`
 
 const Badge = styled.div`
   width: fit-content;
-  background: #1f1f1f;
+  background: #007acc;
   padding: 2px 5px;
   color: #fff;
-  border-radius: 8px;
   cursor: pointer;
   margin-right: 8px;
 `
@@ -194,6 +251,7 @@ const Tags = styled.h5`
 `
 const Article = styled.div`
   margin-top: 25px;
+  border-bottom: 1px solid #efefed;
   small {
     font-weight: 900;
   }

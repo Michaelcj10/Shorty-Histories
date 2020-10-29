@@ -11,7 +11,7 @@ const Input = props => {
       <InputStyle
         style={{
           borderBottom: inputFocused
-            ? "1px solid rgb(70, 194, 147)"
+            ? "1px solid #007acc"
             : "1px solid #191919",
         }}
         placeholder={props.placeholder}

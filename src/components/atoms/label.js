@@ -5,7 +5,7 @@ const Label = props => {
     <StyledLabel
       style={{
         fontSize: props.focused ? "15px" : "14px",
-        color: props.focused ? "rgb(70, 194, 147)" : "#191919",
+        color: props.focused ? "#007acc" : "#191919",
       }}
     >
       {props.text}
